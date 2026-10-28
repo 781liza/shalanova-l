@@ -1,0 +1,11 @@
+class Task1:
+    def __init__(self, arr):
+        self.arr = arr
+
+    def solve(self):
+        mn, mx = min(self.arr), max(self.arr)
+        i1, i2 = self.arr.index(mn), self.arr.index(mx)
+        return sum(self.arr[min(i1, i2) + 1 : max(i1, i2)])
+numbers = [1.5, 5.0, 2.0, 0.5, 4.0]
+task = Task1(numbers)
+print(Task1([1.5, 5.0, 2.0, 0.5, 4.0]).solve())
