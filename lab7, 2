@@ -1,0 +1,8 @@
+class Task2:
+    def __init__(self, m):
+        self.m, self.n, self.s = m, len(m), sum(m[0])
+    def solve(self):
+        return all(sum(r) == self.s for r in self.m) and all(sum(self.m[r][c]for r in range(self.n)) == self.s for c in range(self.n))
+
+matrix = [[8, 1, 6], [3, 5, 7], [4, 9, 2]]
+print(Task2(matrix).solve())
