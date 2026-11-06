@@ -1,0 +1,13 @@
+def break_glass(glass):
+    density = {'H': 1.36, 'W': 1.00, 'A': 0.87, "0": 0.80}
+    rows = len(glass)
+    cols = len(glass[0])
+    items = []
+    for row in glass:
+        for x in row:
+            items.append(x)
+    items.sort(key=lambda x: density[x])
+    result = []
+    for i in range(rows):
+        result.append(items[i * cols:(i + 1) * cols])
+        return result
