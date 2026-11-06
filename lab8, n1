@@ -1,0 +1,10 @@
+def switcheroo(s):
+    result = ''
+    for ch in s:
+        if ch == 'a':
+            result += 'b'
+        elif ch == "b":
+            result += 'a'
+        else:
+            result += ch
+    return result
